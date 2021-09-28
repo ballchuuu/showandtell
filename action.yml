@@ -1,0 +1,16 @@
+name: 'Telegram Message Notify'
+description: 'Sending a Telegram message'
+inputs:
+  to:
+    description: 'telegram user'
+  token:
+    description: 'telegram token'
+  message:
+    description: 'telegram message'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'message-square'
+  color: 'blue'
