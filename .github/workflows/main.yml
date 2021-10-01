@@ -1,8 +1,6 @@
 name: Telegram Notifications For Push Request
 
-on:
-  issues:
-    types: [push, pull_request]
+on: [push, pull_request]
 
 jobs:
   notify:
