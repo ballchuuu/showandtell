@@ -27,5 +27,10 @@ jobs:
           ${{ github.event_name }} commit in ${{ github.repository }} by "${{ github.actor }}". [${{github.sha}}@${{ github.ref }}]
 ```
 
+#### Sample of Telegram message received
+<a href="url"><img src="sample.JPG"  width="50%" height="50%" ></a>
 
-Referenced from https://github.com/appleboy/telegram-action :)
+
+
+#### Special Thanks!
+Referenced from https://odoo-devops.readthedocs.io/en/latest/git/github-telegram-notifications.html :)
