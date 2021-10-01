@@ -26,3 +26,5 @@ jobs:
         message: |
           ${{ github.event_name }} commit in ${{ github.repository }} by "${{ github.actor }}". [${{github.sha}}@${{ github.ref }}]
 ```
+
+Referenced from https://github.com/appleboy/telegram-action :)
