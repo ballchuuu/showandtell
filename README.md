@@ -10,7 +10,22 @@ To utilise GitHub actions to provide a workflow that triggers a notification whe
 4. Adding the yaml file as seen below to GitHub Actions
 
 ```
+name: Telegram Notifications For Push Request
 
+on: [push, pull_request]
+
+jobs:
+  notify:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send notifications to Telegram
+      run: curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_TO }} -d text="${MESSAGE}" >> /dev/null
+      env:
+        MESSAGE: |
+          ${{ github.event_name }} commit in ${{ github.repository }} by "${{ github.actor }}". [${{github.sha}}@${{ github.ref }}]
 ```
+
 
 Referenced from https://github.com/appleboy/telegram-action :)
